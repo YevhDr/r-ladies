@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заголовок статті, який буде відображатись в соцмережах</title>
+
+    <meta name="description" content="Опис статті, який буде відображатись в соцмережах">
+    <meta name="author" content="імʼя автора">
+
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:site_name"
+          content="Заголовок статті, який буде відображатись в соцмережах"/>
+    <meta property="og:type" content="http://texty.org.ua/d/2018/test-project"/>
+    <meta property="og:title"
+          content="Заголовок статті, який буде відображатись в соцмережах"/>
+    <meta property="og:image" content="http://texty.org.ua/d/2018/test-project/img/header-image.jpg"/>
+    <meta property="og:description"
+          content="Опис статті, який буде відображатись в соцмережах"/>
+    <meta property="og:url" content="http://texty.org.ua/d/2018/test-project"/>
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:site" content="@textyorgua"/>
+    <meta property="twitter:account_id" content="49572937"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="http://texty.org.ua/d/2018/test-project"/>
+    <meta name="twitter:title"
+          content="Заголовок статті, який буде відображатись в соцмережах"/>
+    <meta name="twitter:description"
+          content="Опис статті, який буде відображатись в соцмережах"/>
+    <meta name="twitter:image:src" content="http://texty.org.ua/d/2018/test-project/img/header-image.jpg"/>
+    <meta name="twitter:image:width" content="1200"/>
+    <meta name="twitter:image:height" content="630"/>
+
+
+    <!-- Other Meta Tags -->
+    <meta name="title"
+          content="Заголовок статті, який буде відображатись в соцмережах">
+    <meta name="description"
+          content="Опис статті, який буде відображатись в соцмережах">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+</head>
+<body>
+<script src="lib/jquery-3.3.1.min.js" ></script>
+<script src="lib/d3.v3.min.js" ></script>
+<script src="js/lazzy-loader.js"></script>
+<script src="lib/share-behavior.js"></script>
+
+<div class="container">
+    <div class="logo">
+        <a href='texty.org.ua' target='_blank'><svg id="logo" viewBox="0 0 1366 292" style="enable-background:new 0 0 1366 292;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M146.9,98.6h-43.3v122.7H74.5V98.6H31V72.7h115.9V98.6z"/>
+	</g>
+	<g>
+		<path d="M157.7,72.7h88.1v25.9h-59v34.6h53.7v25.9h-53.7v36.3h60.1v25.9h-89.1V72.7z"/>
+	</g>
+	<g>
+		<path d="M299.2,145.7l-41.4-73h35l22.9,42.9l5.1,15.1l4.9-15.1l24-42.9h31.6l-42.9,71.5l45,77h-34.6l-26.1-45.8l-5.7-15.7
+			l-5.5,15.7l-26.3,45.8h-31.6L299.2,145.7z"/>
+	</g>
+	<g>
+		<path d="M502.6,98.6h-43.3v122.7h-29.1V98.6h-43.5V72.7h115.9V98.6z"/>
+	</g>
+	<g>
+		<path d="M559.7,166.1l-48.8-93.4h34.6l27.2,55.8l3,15.7h1.1l3.2-16.1l26.3-55.4h31.2l-48.6,93.2v55.4h-29.1V166.1z"/>
+	</g>
+	<g>
+		<path d="M616.5,207.3c0-4.9,1.6-8.9,4.7-11.8c3.1-2.9,7.2-4.4,12.3-4.4c5.4,0,9.6,1.5,12.7,4.4c3.1,2.9,4.7,6.8,4.7,11.8
+			c0,5-1.6,8.9-4.7,11.9c-3.1,3-7.4,4.5-12.7,4.5c-5.1,0-9.2-1.5-12.3-4.5C618.1,216.2,616.5,212.2,616.5,207.3z"/>
+	</g>
+	<g>
+		<path d="M663.6,147c0-24.8,5.4-43.8,16.3-57.2c10.9-13.4,26.5-20,46.7-20c10.6,0,19.9,1.8,27.8,5.5c7.9,3.7,14.5,8.9,19.7,15.7
+			c5.2,6.8,9.1,14.9,11.7,24.4c2.5,9.5,3.8,20,3.8,31.6c0,24.8-5.5,43.8-16.4,57.2c-11,13.4-26.5,20.1-46.6,20.1
+			c-10.8,0-20.1-1.8-28-5.5c-7.9-3.7-14.5-8.9-19.6-15.7c-5.2-6.8-9-14.9-11.6-24.4C664.9,169.1,663.6,158.6,663.6,147z M694.2,147
+			c0,7.5,0.6,14.4,1.9,20.7c1.3,6.3,3.2,11.7,5.8,16.2c2.6,4.5,6,8.1,10.1,10.6c4.1,2.5,9,3.8,14.7,3.8c10.3,0,18.3-4,24-12.1
+			c5.7-8.1,8.5-21.2,8.5-39.3c0-7.2-0.6-13.9-1.8-20.2c-1.2-6.2-3.1-11.7-5.6-16.3c-2.5-4.7-5.9-8.3-10-10.9
+			c-4.1-2.6-9.1-3.9-15.1-3.9c-10.3,0-18.3,4.1-24,12.4C697,116.3,694.2,129.3,694.2,147z"/>
+	</g>
+	<g>
+		<path d="M806.3,74.2c3.3-0.6,6.8-1.1,10.5-1.6c3.7-0.5,7.5-0.9,11.2-1.2c3.7-0.3,7.4-0.5,10.9-0.6c3.5-0.1,6.8-0.2,9.8-0.2
+			c6.9,0,13.8,0.6,20.5,1.9c6.7,1.3,12.7,3.5,18,6.6c5.3,3.1,9.6,7.4,12.7,12.8c3.2,5.5,4.8,12.3,4.8,20.5c0,12.2-2.8,22.1-8.5,29.7
+			c-5.7,7.6-13.2,12.9-22.7,15.9l10.4,6.6l34,56.7h-33.5l-33.7-58.2l-15.3-2.8v60.9h-29.1V74.2z M850.8,96.5c-3,0-5.9,0.1-8.8,0.2
+			c-2.9,0.1-5.1,0.4-6.7,0.8v43.1h12.3c8.1,0,14.5-1.8,19.3-5.5c4.8-3.7,7.2-9.8,7.2-18.2c0-6.4-2-11.4-5.9-15
+			C864.3,98.3,858.5,96.5,850.8,96.5z"/>
+	</g>
+	<g>
+		<path d="M975.2,143.8h55.4V210c-5.9,5-13.1,8.6-21.3,10.8c-8.3,2.3-16.4,3.4-24.5,3.4c-9.5,0-18.3-1.5-26.4-4.5
+			c-8.1-3-15.2-7.6-21.1-13.9c-5.9-6.3-10.6-14.3-14-24.1c-3.4-9.8-5.1-21.4-5.1-34.8c0-14,2-25.9,6-35.8c4-9.8,9.3-17.8,15.9-24
+			s14-10.6,22.2-13.4c8.2-2.8,16.6-4.1,25-4.1c8.5,0,15.9,0.6,22.4,1.9c6.4,1.3,11.6,2.6,15.4,4l-5.9,24.4
+			c-3.5-1.4-7.5-2.5-11.9-3.3c-4.4-0.8-10-1.2-16.8-1.2c-6.1,0-11.7,0.9-16.8,2.8c-5.1,1.8-9.5,4.8-13.3,9c-3.7,4.2-6.7,9.5-8.7,16
+			c-2.1,6.5-3.1,14.4-3.1,23.8c0,8.9,1,16.6,3,23c2,6.4,4.7,11.7,8.3,15.9c3.5,4.2,7.7,7.3,12.4,9.2c4.7,2,9.8,3,15.2,3
+			c3.7,0,7.3-0.5,10.8-1.4c3.5-0.9,6.5-2.3,8.9-4.1v-28l-32.1-3.4V143.8z"/>
+	</g>
+	<g>
+		<path d="M1044,207.3c0-4.9,1.6-8.9,4.7-11.8c3.1-2.9,7.2-4.4,12.3-4.4c5.4,0,9.6,1.5,12.7,4.4c3.1,2.9,4.7,6.8,4.7,11.8
+			c0,5-1.6,8.9-4.7,11.9c-3.1,3-7.4,4.5-12.7,4.5c-5.1,0-9.2-1.5-12.3-4.5C1045.5,216.2,1044,212.2,1044,207.3z"/>
+	</g>
+	<g>
+		<path d="M1176.4,72.7h27.6v95.9c0,9.6-1.3,17.9-3.8,24.8c-2.6,6.9-6.1,12.7-10.6,17.2c-4.5,4.5-10,7.9-16.6,10
+			c-6.5,2.1-13.7,3.2-21.4,3.2c-37.6,0-56.5-17.2-56.5-51.6V72.7h29.1v93.8c0,5.8,0.5,10.7,1.6,14.8c1.1,4,2.7,7.3,5,9.8
+			c2.3,2.5,5.1,4.2,8.5,5.3c3.4,1.1,7.4,1.6,11.9,1.6c8.9,0,15.3-2.5,19.3-7.4c4-5,5.9-12.9,5.9-24V72.7z"/>
+	</g>
+	<g>
+		<path d="M1293.6,188.4h-45.6l-11.2,32.9h-29.1l53.5-149.6h21.4l53.5,149.6h-30.6L1293.6,188.4z M1255.4,165h31.8l-11-33.1
+			l-4.5-23.3h-1.1l-4.5,23.6L1255.4,165z"/>
+	</g>
+</g>
+</svg></a>
+    </div>
+    <div class="social-icons">
+    <div class="facebook">
+        <a class='share-btn' href="https://www.facebook.com/sharer/sharer.php?u=http://texty.org.ua/d/2018/test-project">
+            <svg class="cover" id="facebook" viewBox="0 0 448 512">
+                <path d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="twitter">
+        <a class='share-btn' href="https://twitter.com/intent/tweet?text=http://texty.org.ua/d/2018/test-project">
+            <svg id="twitter" viewBox="0 0 448 512">
+                <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"/>
+            </svg>
+        </a>
+    </div>
+    </div>
+    <div class="header-image">
+        <img class="cover" src="img/main.jpg"/>
+    </div>
+	<div id="overlay"></div>
+    <div class="title">
+        <h1>Заголовок статті. Для зміни редагуйте файл: runFirst.Rmd</h1>
+    </div>
+<div class='content'>
+    <h3>Аннотация до статті. Пару вступних реченнь</h3>
+    <h5><b>Автор: </b>імʼя автора.<br/> <b>Опубліковано: </b>дата публікації.</h5>
+    <!-- не редагуємо -->
+    <!-- не редагуємо -->
+    <!-- не редагуємо -->
+    <!-- редагуємо за потреби, код змінює колір лого, соц іконок і overlay заставочного зображення -->
+    <script type="text/javascript">
+    jQuery('svg#facebook')
+      .css("fill", "white")
+    jQuery('svg#twitter')
+      .css("fill", "white")
+    jQuery('svg#logo')
+      .css("fill", "white")
+    jQuery('#overlay')
+      .css("background-color", "black")
+      .css("opacity", "0.5")
+    </script>
+    <p>Абзац Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    <!-- Додаємо зображення:  -->
+    <div class="bigImg">
+    <div class="figure">
+    <img src="img/image.png" class="bigImg lazy" />
+    
+    </div>
+    </div>
+    <!-- замість "image.png" вставте потрібну назву  -->
+    <p>Ще кілька абзаців Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    <!-- Ще одне зображення, якщо треба:  -->
+    <div class="bigImg">
+    <p><img src="img/image2.png" class="bigImg lazy" /><!-- Видаліть цю строчку, якщо друга картинка не потрібна --></p>
+    </div>
+    <!-- замість "image2.png" вставте потрібну назву  -->
+    <p>Абзац Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+    <!-- не редагуємо, цей скрипт прибирає зайві <p> теги, перед зображеннями, а також додає клас lazy (зображення вантажиться, коли воно потрапляє у vievport) -->
+    <script type="text/javascript">
+    jQuery('div.bigImg p')
+      .contents()
+      .unwrap();
+    jQuery('.bigImg img')
+      .addClass('lazy')
+    </script>
+ </div>
+<div class="read-more">
+        <h3 class="read-text" ><b>Читайте також:</b></h3>
+        <div class="read-more-first">
+            <a target="_blank" href="http://texty.org.ua/d/2018/amber/"><img src="img/read_more1.png"
+                                                                             class="cover" alt="опис першого лінку, наприклад ‘авіація’ або його назва"></a>
+        </div>
+        <div class="read-more-second">
+            <a target="_blank" href="http://texty.org.ua/d/auto_euro/"><img src="img/read_more2.png"
+                                                                            class="cover"
+                                                                            alt="опис другого лінку, наприклад ’бурштин’або його назва"></a>
+        </div>
+        <div class="read-more-third">
+            <a target="_blank" href="http://texty.org.ua/d/urban-heat-web/"><img
+                    src="img/read_more3.png" class="cover" alt="опис третього лінку"></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul class="links0">
+            <li id="big">&copy; 2018, Тексти.org.ua <br/> Медія для розумних</li>
+
+        </ul>
+
+
+        <ul class="links1">
+            <li><a href="http://texty.org.ua/mod/article/index.php?ed=1">Вибір редакції</a>
+                <a href="http://texty.org.ua/mod/article/?view=rss&amp;ed=1">(RSS)</a>
+            </li>
+            <li><a href="http://texty.org.ua/mod/video/">Відео</a>
+                <a href="http://texty.org.ua/mod/video/?view=rss">(RSS)</a>
+            </li>
+            <li><a href="http://texty.org.ua/mod/article/">Статті</a>
+                <a href="http://texty.org.ua/mod/article/?view=rss">(RSS)</a>
+            </li>
+            <li><a href="http://texty.org.ua/mod/news/">Новини</a>
+                <a href="http://texty.org.ua/mod/news/?view=rss">(RSS)</a>
+            </li>
+            <li><a href="http://texty.org.ua/mod/blog/everyone.php">Блоги</a>
+                <a href="http://texty.org.ua/mod/blog/blog_list.php?view=rss">(RSS)</a>
+            </li>
+        </ul>
+
+        <ul class="links2">
+            <li>
+                <a href="http://texty.org.ua/mod/archive/tag.php?tag=%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%86%D1%96%D1%8F">Концепції</a>
+            </li>
+            <li>
+                <a href="http://texty.org.ua/mod/archive/tag.php?tag=%D1%80%D0%B5%D1%84%D0%BE%D1%80%D0%BC%D0%B8">Реформи</a>
+            </li>
+            <li>
+                <a href="http://texty.org.ua/mod/archive/tag.php?tag=%D0%B4%D0%BE%D1%81%D0%B2%D1%96%D0%B4">Важливий
+                    досвід</a></li>
+            <li>
+                <a href="http://texty.org.ua/mod/archive/tag.php?tag=%D1%96%D0%BD%D0%BE%D0%B7%D0%BC%D1%96">Найцікавіше
+                    з інозмі</a></li>
+            <li><a href="http://texty.org.ua/pg/blog/infoviz">Журналістика даних</a></li>
+        </ul>
+
+
+        <ul class="links3">
+            <li><a id="orange" href="http://texty.org.ua/mod/pages/donate.php" class="support-site">Підтримай сайт
+                фінансово!</a></li>
+            <li><a href="http://facebook.com/texty.org.ua">Ми у Фейсбуці</a></li>
+            <li><a href="http://twitter.com/textyorgua">Ми у Твітері</a></li>
+            <li><a href="http://texty.org.ua/pg/pages/view/22">Про нас</a></li>
+            <li><a href="http://texty.org.ua/mod/archive/">Архів</a></li>
+        </ul>
+
+        <div class="copying-info">
+            Матеріали ТЕКСТИ.org.ua можна поширювати згідно з ліцензією Creative Commons з обов’язковим
+            посиланням.
+            Велике прохання ставити гіперпосилання в першому чи другому абзаці вашого матеріалу.
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

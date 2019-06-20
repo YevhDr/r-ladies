@@ -1,0 +1,175 @@
+---
+output: 
+  html_document:
+    template: template.html 
+    code_folding: hide # fold code chunks by default
+    keep_md: false # generate a markdown version too
+    self_contained: no # don't create single file
+    md_extensions: -autolink_bare_uris # dont add <a> to any url in text
+    
+    
+    
+page_url: http://your.webpage/test-project #лінк на ваш проект, наприклад як тут
+page_title: "R-markdown"  
+description: "Опис статті, який буде відображатись в соцмережах"
+title: "R-markdown"
+subtitle: "З knitr та R-markdown Ви можете в одному документі використовувати декілька мов: зокрема Python, SQL, JavaScript, CSS та інші."
+authors: "Євгенія Дроздова"
+published: "2 липня 2019 року"
+coverImage: img/project_cover.jpg
+
+#посилання на інші проекти в "Читайте також"
+read_more1: http://texty.org.ua/d/2018/amber/ #лінк-посилання на попередній проект
+read_more1_alt: "опис першого лінку, наприклад 'авіація' або його назва"
+read_more2: http://texty.org.ua/d/auto_euro/ #лінк-посилання на попередній проект
+read_more2_alt: "опис другого лінку, наприклад 'бурштин'або його назва"
+read_more3: http://texty.org.ua/d/urban-heat-web/ #лінк-посилання на попередній проект
+read_more3_alt: "опис третього лінку"
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) }) # this is a hack to create index.html from Rmd file with different name
+
+css: 
+- css/style.css
+
+lib:
+  - lib/jquery-3.3.1.min.js
+  - lib/d3.v3.min.js
+
+---
+<!-- не редагуємо -->
+```{r installpackages, include=FALSE }
+#завантажить необхідні пакети, якщо вони відсутні
+list.of.packages <- c('RCurl', 'ggplot2', 'rlang', 'readr', 'tidyverse', 'hrbrthemes', 'knitr', 'gridExtra', 'grid')
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages, repos = "http://cran.us.r-project.org", dependencies = TRUE)
+```
+
+<!-- не редагуємо -->
+```{r pandoc, include=FALSE }
+source("TemplateToPandoc.R")
+user <- Sys.info()[["user"]]
+path = paste0('/home/', user, '/Desktop')
+#для запуску функції треба прописати шлях для створення папки(1) і назву проекту(2)
+TemplateToPandoc(path, 'Rmd')
+```
+
+<!-- не редагуємо -->
+```{r dir, include=FALSE }
+source("createDir.R")
+user <- Sys.info()[["user"]]
+path = paste0('/home/', user, '/Desktop')
+#для запуску функції треба прописати шлях для створення папки(1) і назву проекту(2)
+createDirs(path, 'Rmd')
+```
+
+
+```{js, echo=FALSE } 
+
+``` 
+
+
+```{r results="asis", eval = TRUE, echo=FALSE }
+cat("
+<style>
+h1 {
+   color: #88398A;
+}
+</style>
+")
+```
+
+
+Ще кілька абзаців
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+
+
+```{r chart1d, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE }
+
+# echo = FALSE - to omit the R code that generated the plot.
+# eval = FALSE - to omit the result of code
+
+library('dplyr')
+library('ggplot2')
+library('hrbrthemes')
+library('grid')
+library('gridExtra') 
+
+user <- Sys.info()[["user"]]
+path = paste0('/home/', user, '/Desktop/Rmd')
+setwd(path)
+df <- read.csv("data/data.csv", header = T, fileEncoding = "UTF-8")
+
+
+plot <- grid.arrange(
+  textGrob("Title", 
+           gp=gpar(fontsize=15, col="#5D646F", fontface='bold', fontfamily ='Open Sans'), 
+           x=unit(0.15, "npc"), just=c("left", "bottom")),
+  textGrob("Subtitle",
+           gp=gpar(fontsize=12, col="#5D646F", fontface='plain', fontfamily ='Open Sans'), 
+           x=unit(0.15, "npc"), just=c("left", "bottom")),
+  textGrob("к-ть", 
+           gp=gpar(fontsize=10, col="#5D646F", fontfamily ='Open Sans'), 
+           x=unit(0.05, "npc"), just=c("left", "bottom")),
+  ggplot(df, aes(x=reorder(xColumn, yColumn), y=yColumn)) + 
+    geom_hline(yintercept=-100) + 
+    geom_bar(stat="identity", width=0.1, position=position_dodge(width=0.5), fill='#88398A') +
+    geom_text(aes(label=round(yColumn, 2)), y=-0.03*max(df$yColumn), size=3.5, hjust=1, vjust=0, colour = '#5D646F', family="Open Sans")+
+    geom_text(aes(label=xColumn), y=0, size=3.5, hjust=0, vjust=-1, family = 'Open Sans', colour = '#5D646F')+
+    coord_flip(ylim = c(-0.2*max(df$yColumn), max(df$yColumn))) + 
+    labs(x = '', y = 'R&D Expense, USD billions')+
+    theme(plot.background=element_blank(),
+          panel.background = element_rect(fill = NA),
+          panel.border=element_blank(), 
+          panel.grid.minor = element_blank(),
+          axis.title.x = element_blank(),
+          axis.ticks.length = unit(0, "cm"),
+          panel.grid.major = element_blank(),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank(),
+          plot.margin = unit(c(0.5,0.5,0.5,-1), "cm")) +
+          annotate("text", x=20, y=150, label=" додаткове пояснення того, \n що відбувається на графіку", 
+                   color = "#5D646F", size = 3.5, hjust = "left", fontface='plain' ), #анотація за потреби
+  textGrob("LOGO", 
+           gp=gpar(fontsize=10, col="#2b2b2b", fontface='bold'), 
+           x=unit(0.6, "npc"), just=c("left", "bottom")),
+  textGrob("Дані: джерело", 
+           gp=gpar(fontsize=9, col="#5D646F"), 
+           x=unit(0.6, "npc"), just=c("left", "bottom")),
+  ncol=1, nrow = 6,
+  heights=c(0.03, 0.03, 0.01, 0.80, 0.02, 0.01) #треба погратися з висотою кожного блоку
+)
+
+ggsave(file="img/chart.png", plot = plot, width=8, height=13, dpi=100) #відреагуйте відповідно ширину і висоту як співвідношення сторін.
+
+
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+![](img/chart.png){.chart .hidden-xs .visible-sm .visible-md .visible-lg .visible-xl}
+
+
+Абзац
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+<!-- Додаємо зображення:  -->
+<div class='bigImg'>
+![](img/image.png){.bigImg .lazy } 
+</div>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex leo, sollicitudin ut est facilisis, vulputate aliquam felis. Fusce non iaculis metus. Aliquam nec facilisis enim. Proin quis risus fermentum, iaculis tellus at, lobortis mi. Nullam sapien elit, sollicitudin non porttitor quis, accumsan sed elit. Aenean dignissim lacus ac felis tincidunt interdum. Quisque vel pellentesque elit, id pulvinar quam. Quisque at mi consequat diam tincidunt placerat non eleifend diam. Nulla placerat quis neque ut faucibus. Duis ornare tellus nec dapibus faucibus. Vestibulum arcu nunc, pulvinar quis maximus in, dictum eget nibh. Vivamus eu cursus magna, ut eleifend enim. Etiam a pharetra ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+<!-- не редагуємо, цей скрипт прибирає зайві <p> теги, перед зображеннями, а також додає клас lazy (зображення вантажиться, коли воно потрапляє у vievport) -->
+
+```{js, echo=FALSE }
+jQuery('div.bigImg p')
+  .contents()
+  .unwrap();
+jQuery('.bigImg img')
+  .addClass('lazy')
+``` 
+
+
+
