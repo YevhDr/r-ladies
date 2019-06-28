@@ -39,7 +39,7 @@ TemplateToPandoc <- function(path, projectName){
       }
     }
     setwd(mainDir)
-    file.remove(templates)
+    #file.remove(templates)
     
   }
   
@@ -81,6 +81,6 @@ TemplateToPandoc <- function(path, projectName){
       }
     }
     setwd(mainDir)
-    file.remove(templates)
+    #file.remove(templates)
   }
 }
