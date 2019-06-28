@@ -18,9 +18,9 @@
 
 
 ## Корисні ресурси:
-Приклад сторінки, що зверстана з RMarkdown: https://rstudio-pubs-static.s3.amazonaws.com/130452_0d5da1b49bbf46e8ac6d6b2d41fc81b0.html
+Приклад сторінки, що зверстана з RMarkdown: https://bit.ly/2X78oPT
 
 Теми RMarkdown: https://bootswatch.com/3/
 
-The Evolution of a ggplot: https://cedricscherer.netlify.com/2019/05/17/the-evolution-of-a-ggplot-ep.-1/?utm_campaign=Data_Elixir&utm_medium=email&utm_source=Data_Elixir_239
+The Evolution of a ggplot: https://bit.ly/2XcsBsg
 
