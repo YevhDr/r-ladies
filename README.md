@@ -41,6 +41,8 @@
 
     self_contained:
 
+    template:
+
 
 ## Параметри блоків коду:
 
