@@ -43,6 +43,8 @@
 
     template:
 
+    knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) }) # this is a hack to create index.html from Rmd file with different name
+
 
 ## Параметри блоків коду:
 
