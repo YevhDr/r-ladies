@@ -18,13 +18,6 @@ authors: "Євгенія Дроздова"
 published: "2 липня 2019 року"
 coverImage: img/project_cover.jpg
 
-#посилання на інші проекти в "Читайте також"
-read_more1: http://texty.org.ua/d/2018/amber/ #лінк-посилання на попередній проект
-read_more1_alt: "опис першого лінку, наприклад 'авіація' або його назва"
-read_more2: http://texty.org.ua/d/auto_euro/ #лінк-посилання на попередній проект
-read_more2_alt: "опис другого лінку, наприклад 'бурштин'або його назва"
-read_more3: http://texty.org.ua/d/urban-heat-web/ #лінк-посилання на попередній проект
-read_more3_alt: "опис третього лінку"
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) }) # this is a hack to create index.html from Rmd file with different name
 
 css: 
