@@ -33,13 +33,28 @@
 
     df_print: #paged
 
-    fig_width: 10
+    fig_width:
 
-    fig_height: 7
+    fig_height:
 
     code_folding:
 
     self_contained:
+
+
+## Параметри блоків коду:
+
+echo
+
+eval
+
+include
+
+warning
+
+error
+
+
 
 
 ## Корисні ресурси:
