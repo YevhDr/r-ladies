@@ -17,7 +17,7 @@
 
 
 
-#Корисні ресурси:
+## Корисні ресурси:
 Приклад сторінки, що зверстана з R-markdown: https://rstudio-pubs-static.s3.amazonaws.com/130452_0d5da1b49bbf46e8ac6d6b2d41fc81b0.html
 Теми: https://bootswatch.com/3/
 
