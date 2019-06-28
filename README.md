@@ -64,3 +64,5 @@
 
 The Evolution of a ggplot: https://bit.ly/2XcsBsg
 
+Chunk options and package options: https://yihui.name/knitr/options/
+
