@@ -44,15 +44,15 @@
 
 ## Параметри блоків коду:
 
-echo
+    echo
 
-eval
+    eval
 
-include
+    include
 
-warning
+    warning
 
-error
+    error
 
 
 
