@@ -17,6 +17,33 @@
 
 
 
+## Параметри R Markdown html_document:
+
+    Загальні
+
+    toc:
+
+    number_sections:
+
+    theme: https://bootswatch.com/3/
+
+    highlight:
+
+    сss:
+
+    lib:
+
+    df_print: paged
+
+    fig_width: 10
+
+    fig_height: 7
+
+    code_folding:
+
+    self_contained:
+
+
 ## Корисні ресурси:
 Приклад сторінки, що зверстана з RMarkdown: https://bit.ly/2X78oPT
 
