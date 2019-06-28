@@ -19,13 +19,11 @@
 
 ## Параметри R Markdown html_document:
 
-    Загальні
-
     toc:
 
     number_sections:
 
-    theme: https://bootswatch.com/3/
+    theme:
 
     highlight:
 
@@ -33,7 +31,7 @@
 
     lib:
 
-    df_print: paged
+    df_print: #paged
 
     fig_width: 10
 
