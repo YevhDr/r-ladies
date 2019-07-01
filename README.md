@@ -1,20 +1,5 @@
 # r-ladies
 
-## Приклад за лнком: https://yevhdr.github.io/r-ladies/
-
-
-Для початку роботи, завантажте папку Rmd на Робочий стіл.
-
-## Linux
-Відкрийте файл markdown.Rmd, натисність кнопку "Knit" (звʼязати).
-
-## Windows
-Відкрийте файл markdown.Rmd, натисність кнопку "Knit" (звʼязати).
-
-**У разі виникнення помилок:**
-    1) у файлі markdown.Rmd вкажіть відповідний шлях до Робочого стола: рядки 50 та 59;
-    2) у файлі TemplateToPandoc.R вкажіть відповідний шлях до папки "AppData/Roaming": рядок 49.
-
 
 
 ## Параметри R Markdown html_document:
@@ -27,7 +12,7 @@
 
     highlight:
 
-    df_print: #paged
+    df_print: paged
 
     fig_width:
 
@@ -57,6 +42,53 @@
     error
 
 
+## CSS код в Markdown:
+
+    ```{r mycss, results = "asis", eval = TRUE, echo=FALSE  }
+    cat("<style>
+
+    h1, h2, h3, p {
+    line-height:1.6;
+    }
+
+    p {
+    font-size:18px;
+    }
+
+    img {
+    margin: 50px auto;
+    }
+
+    </style>
+    ")
+
+    ```
+
+## JS код в Markdown:
+
+    ```{js, echo=FALSE}
+
+    $('img').on('click', function(){
+      alert("hi")
+    })
+
+    ```
+
+## Верстка з шаблоном:
+## Приклад за лінком: https://yevhdr.github.io/r-ladies/
+
+Для початку роботи, завантажте папку Rmd на Робочий стіл.
+
+## Linux
+Відкрийте файл markdown.Rmd, натисність кнопку "Knit" (звʼязати).
+
+## Windows
+Відкрийте файл markdown.Rmd, натисність кнопку "Knit" (звʼязати).
+
+**У разі виникнення помилок:**
+    1) у файлі markdown.Rmd вкажіть відповідний шлях до Робочого стола: рядки 50 та 59;
+    2) у файлі TemplateToPandoc.R вкажіть відповідний шлях до папки "AppData/Roaming": рядок 49.
+
 
 
 ## Корисні ресурси:
@@ -67,5 +99,10 @@
 Chunk options and package options: https://yihui.name/knitr/options/
 
 The Evolution of a ggplot: https://bit.ly/2XcsBsg
+
+
+#Проект, який ТЕКСТИ робили в R:
+
+Тому що дешевше, дурнику: http://texty.org.ua/d/auto_euro/
 
 
