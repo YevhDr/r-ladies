@@ -4,9 +4,9 @@
 
 ## Параметри R Markdown html_document:
 
-    toc:
+    toc: (TRUE/FALSE)
 
-    number_sections:
+    number_sections: (TRUE/FALSE)
 
     theme:
 
@@ -18,7 +18,7 @@
 
     fig_height:
 
-    self_contained:
+    self_contained: (TRUE/FALSE)
 
     template:
 
@@ -31,15 +31,15 @@
 
 ## Параметри блоків коду:
 
-    echo
+    echo (TRUE/FALSE) - сховати код, показати результат
 
-    eval
+    eval (TRUE/FALSE) - ігнорувати
 
-    include
+    include (TRUE/FALSE) - виконати, але не виводити
 
-    warning
+    warning (TRUE/FALSE)
 
-    error
+    error (TRUE/FALSE)
 
 
 ## CSS код в Markdown:
