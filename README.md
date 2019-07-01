@@ -101,7 +101,7 @@ Chunk options and package options: https://yihui.name/knitr/options/
 The Evolution of a ggplot: https://bit.ly/2XcsBsg
 
 
-## Проект, який ТЕКСТИ робили в R:
+## Приклад нашого проекту R:
 
 Тому що дешевше, дурнику: http://texty.org.ua/d/auto_euro/
 
