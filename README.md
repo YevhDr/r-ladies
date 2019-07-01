@@ -27,21 +27,19 @@
 
     highlight:
 
-    сss:
-
-    lib:
-
     df_print: #paged
 
     fig_width:
 
     fig_height:
 
-    code_folding:
-
     self_contained:
 
     template:
+
+    сss:
+
+    lib:
 
     knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
 
