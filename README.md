@@ -90,7 +90,6 @@
     2) у файлі TemplateToPandoc.R вкажіть відповідний шлях до папки "AppData/Roaming": рядок 49.
 
 
-
 ## Корисні ресурси:
 Приклад сторінки, що зверстана з RMarkdown: https://bit.ly/2X78oPT
 
